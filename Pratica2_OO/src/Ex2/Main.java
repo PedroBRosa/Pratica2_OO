@@ -13,6 +13,8 @@ public class Main {
         System.out.println("Escreva a porcentagem do rendimento: ");
         porcentRendimento = ler.nextDouble();
 
+        porcentRendimento = porcentRendimento/100;
+
         System.out.println("Escreva quanto foi investido: ");
         investimento = ler.nextDouble();
 
@@ -20,13 +22,8 @@ public class Main {
         qtdMes = ler.nextInt();
 
         Rendimento rendimento = new Rendimento(porcentRendimento,investimento, qtdMes);
-        System.out.println(rendimento.rendimentoBruto(qtdMes));
-
-        for (int i = 1; i <= qtdMes; i++) {
-            rendimento.setQtdMes(i);
-            System.out.println("Mes " +i+ "  Rendimento/mês = " +rendimento.rendimentoBruto(i));
-            System.out.println(rendimento.rendimentoBruto(i));
-        }
+        rendimento.rendimentoBruto();
 
     }
+
 }
