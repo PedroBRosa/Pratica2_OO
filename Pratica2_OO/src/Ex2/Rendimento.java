@@ -14,10 +14,6 @@ public class Rendimento {
     public void setQtdMes(int qtdMes) {
         this.qtdMes = qtdMes;
     }
-    public double getRendimento(double rendimento){
-        this.rendimento = rendimento;
-        return rendimento;
-    }
 
     public void rendimentoBruto() {
         double retorno;
