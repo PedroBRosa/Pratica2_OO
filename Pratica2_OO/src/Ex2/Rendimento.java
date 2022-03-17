@@ -24,7 +24,8 @@ public class Rendimento {
         for (int i = 1; i <= qtdMes; i++) {
             retorno = investimento * rendimento;
             investimento = investimento + retorno;
-            System.out.println("Mes " +i+ "  Rendimento/mês = " +investimento);
+            System.out.printf("Mes %d   |   Rendimento/Mes  %.2f",i,investimento);
+            System.out.println(" ");
         }
     }
 }
