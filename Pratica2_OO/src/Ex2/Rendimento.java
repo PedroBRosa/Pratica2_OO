@@ -5,7 +5,7 @@ public class Rendimento {
     private double investimento;
     private int qtdMes;
 
-    public Rendimento(double rendimento, double investimento, int qtdMes) {
+    public Rendimento( double rendimento, double investimento, int qtdMes) {
         this.rendimento = rendimento;
         this.investimento = investimento;
         this.qtdMes = qtdMes;
@@ -14,15 +14,17 @@ public class Rendimento {
     public void setQtdMes(int qtdMes) {
         this.qtdMes = qtdMes;
     }
+    public double getRendimento(double rendimento){
+        this.rendimento = rendimento;
+        return rendimento;
+    }
 
-    public double rendimentoBruto(int qtdMes) {
-
-        rendimento = rendimento / 100;
+    public void rendimentoBruto() {
         double retorno;
         for (int i = 1; i <= qtdMes; i++) {
             retorno = investimento * rendimento;
             investimento = investimento + retorno;
+            System.out.println("Mes " +i+ "  Rendimento/mês = " +investimento);
         }
-        return investimento;
     }
 }
